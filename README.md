@@ -68,6 +68,7 @@ sudo systemctl status grafana-server
 Open a browser and go to: `http://<your-server-ip>:3000`
 
 Default login is: **admin / admin**
+![Image](https://github.com/user-attachments/assets/93599756-e764-44b0-8d47-cdf34fdb5ecf)
 
 You will be prompted to set a new password.
 # Task 3: Connect Grafana to Azure Monitor
@@ -79,7 +80,7 @@ Use Managed Identity so you don’t have to store Azure credentials in Grafana.
 - Go to Azure Portal → Your VM → **Identity** (under Settings)
 - Toggle **System assigned** to **On**
 - Click **Save**
-
+![Image](https://github.com/user-attachments/assets/f50a2890-72c1-41dc-8085-8fc674ed6faf)
 ### Assign Roles to the VM’s identity:
 - In **Azure Monitor** → **Access control (IAM)**, add the **Monitoring Reader** role for your VM’s identity.
 - In your **Azure Subscription** → **Access control (IAM)**, add the **Reader** role for your VM’s identity.
