@@ -80,6 +80,7 @@ Use Managed Identity so you don’t have to store Azure credentials in Grafana.
 - Go to Azure Portal → Your VM → **Identity** (under Settings)
 - Toggle **System assigned** to **On**
 - Click **Save**
+![Image](https://github.com/user-attachments/assets/4fe54988-b366-4582-9864-48549960f934)
 ![Image](https://github.com/user-attachments/assets/f50a2890-72c1-41dc-8085-8fc674ed6faf)
 ### Assign Roles to the VM’s identity:
 - In **Azure Monitor** → **Access control (IAM)**, add the **Monitoring Reader** role for your VM’s identity.
