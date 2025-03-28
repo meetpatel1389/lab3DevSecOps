@@ -51,14 +51,14 @@ echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stab
 sudo apt-get update
 sudo apt-get install grafana
 ```
-
+![Image](https://github.com/user-attachments/assets/00bcb0d5-a57b-4e11-858f-e5f98c3f130d)
 ## Start and enable Grafana service:
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl start grafana-server
 sudo systemctl enable grafana-server
 ```
-
+![Image](https://github.com/user-attachments/assets/def70544-fdbe-4b74-878b-53f5a484d6f2)
 ## Check status:
 ```bash
 sudo systemctl status grafana-server
