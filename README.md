@@ -80,7 +80,7 @@ Use Managed Identity so you don’t have to store Azure credentials in Grafana.
 - Go to Azure Portal → Your VM → **Identity** (under Settings)
 - Toggle **System assigned** to **On**
 - Click **Save**
-![Image](https://github.com/user-attachments/assets/4fe54988-b366-4582-9864-48549960f934)
+![Image](https://github.com/user-attachments/assets/0e5640db-4481-4579-8e8a-1af648ff73e5)
 ![Image](https://github.com/user-attachments/assets/f50a2890-72c1-41dc-8085-8fc674ed6faf)
 ### Assign Roles to the VM’s identity:
 - In **Azure Monitor** → **Access control (IAM)**, add the **Monitoring Reader** role for your VM’s identity.
@@ -90,13 +90,12 @@ Use Managed Identity so you don’t have to store Azure credentials in Grafana.
 ```bash
 sudo nano /etc/grafana/grafana.ini
 ```
-
 Under the `[azure]` section, ensure you have:
 ```ini
 [azure]
 managed_identity_enabled = true
 ```
-
+![Image](https://github.com/user-attachments/assets/fce37499-02b8-4f17-9e5e-053be52145a8)
 Save and exit nano (press `CTRL + O`, then `Enter`, and `CTRL + X`).
 
 ### Restart Grafana:
@@ -109,6 +108,7 @@ sudo systemctl restart grafana-server
 - Select **Azure Monitor** from the list.
 - Choose **Authenticate using Managed Identity** (instead of providing Tenant ID, Client ID, and Client Secret).
 - Click **Save & Test** to verify the connection.
+![Image](https://github.com/user-attachments/assets/a4df6204-99bc-4875-9012-e44c863bf316)
 
 ---
 
@@ -119,15 +119,17 @@ sudo systemctl restart grafana-server
 
 ## Select Data Source:
 - From the dropdown, select **Azure Monitor**
+  ![Image](https://github.com/user-attachments/assets/1adf573b-fb71-42b6-a5a8-0e82cec6f2aa)
 
 ## Pick a Metric:
 - Choose metrics such as **CPU Usage, Memory Usage, Network In/Out**, etc.
-
+![Image](https://github.com/user-attachments/assets/69d93e4d-4318-4adc-9045-e45cb4a5ffe1)
 ## Customize:
 - Adjust thresholds, colors, labels, and visualization type (e.g., graph, gauge, etc.)
 
 ## Save the panel and dashboard.
 Repeat these steps to add more panels as needed to get a complete performance view of your Ubuntu server.
+![Image](https://github.com/user-attachments/assets/4fe54988-b366-4582-9864-48549960f934)
 
 ---
 
